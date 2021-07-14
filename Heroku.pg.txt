@@ -1,0 +1,17 @@
+Host
+    ec2-54-87-34-201.compute-1.amazonaws.com
+Database
+    dcqn790s08mh2e
+User
+    yevuumhstdtaiz
+Port
+    5432
+Password
+    e31fcf1387aae666846a053cda301ec46e05cb60b0b41477a890902097a0c0e7
+URI
+    postgres://yevuumhstdtaiz:e31fcf1387aae666846a053cda301ec46e05cb60b0b41477a890902097a0c0e7@ec2-54-87-34-201.compute-1.amazonaws.com:5432/dcqn790s08mh2e
+Heroku CLI
+    heroku pg:psql postgresql-asymmetrical-08681 --app operateur-ws
+
+RESET
+heroku pg:reset postgresql-asymmetrical-08681 --app operateur-ws

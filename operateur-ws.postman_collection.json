@@ -1,0 +1,892 @@
+{
+	"info": {
+		"_postman_id": "0766372b-8e50-42bd-8d87-4a1960f352ba",
+		"name": "operateur-ws",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Connexion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\" : \"0340000001\",\r\n    \"password\" : \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/client/connexion",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"client",
+								"connexion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inscription",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"numero\" : \"0340000004\",\r\n\t\"nom\" : \"Test 2\",\r\n\t\"prenom\" : \"Test prenom 2\",\r\n\t\"date_naissance\" : \"2000-10-10\",\r\n\t\"password\" : \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/client/inscription",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"client",
+								"inscription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all clients",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/client",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Status client",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/client/status/C1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"client",
+								"status",
+								"C1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mvola",
+			"item": [
+				{
+					"name": "Liste total mvola",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/mvola/total",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"mvola",
+								"total"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Liste total mvola par numero",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/mvola/total/0340000001",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"mvola",
+								"total",
+								"0340000001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All mvola par numero",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/mvola/all/0340000001",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"mvola",
+								"all",
+								"0340000001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Valide mvola par numero",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/mvola/valide/0340000001",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"mvola",
+								"valide",
+								"0340000001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Invalide mvola par numero",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/mvola/invalide/0340000001",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"mvola",
+								"invalide",
+								"0340000001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Depot mvola",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idclient\" : \"C1\",\r\n    \"montant\" : 222\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/mvola/action/depot",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"mvola",
+								"action",
+								"depot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrait Mvola",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idclient\" : \"C1\",\r\n    \"montant\" : 222\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/mvola/action/retrait",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"mvola",
+								"action",
+								"retrait"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Valider mvola",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idclient\" : \"C1\",\r\n    \"montant\" : 222\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/mvola/valider/M24",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"mvola",
+								"valider",
+								"M24"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Credit",
+			"item": [
+				{
+					"name": "Liste total credit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/credit/total",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"credit",
+								"total"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Liste total credit par numero",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/credit/total/0340000001",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"credit",
+								"total",
+								"0340000001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All credit par numero",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/credit/all/0340000001",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"credit",
+								"all",
+								"0340000001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Depot credit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idclient\" : \"C1\",\r\n    \"montant\" : 222\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/credit/action/depot",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"credit",
+								"action",
+								"depot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrait credit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idclient\" : \"C1\",\r\n    \"montant\" : 222\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/credit/action/retrait",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"credit",
+								"action",
+								"retrait"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Valider mvola",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idclient\" : \"C1\",\r\n    \"montant\" : 222\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/mvola/valider/M24",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"mvola",
+								"valider",
+								"M24"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Offre",
+			"item": [
+				{
+					"name": "Ajout offre",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idtype\" : \"???\",\r\n    \"nom\" : \"Be connect 200\",\r\n    \"description\" : \"Connection 20mo valide 1jour\",\r\n    \"valeur\" : \"20\",\r\n    \"duree_heure\" : \"24\",\r\n    \"prix\" : \"200\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/offre",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"offre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete offre",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/offre/OF3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"offre",
+								"OF3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all offre",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/offre",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"offre"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Offre Client",
+			"item": [
+				{
+					"name": "Achat offre",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idoffre\" : \"OF1\",\r\n    \"idclient\" : \"C1\",\r\n    \"date_achat\" : \"14-03-2021 00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/offre/client/achat",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"offre",
+								"client",
+								"achat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Offre valide",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/offre/client/0340000001",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"offre",
+								"client",
+								"0340000001"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appel",
+			"item": [
+				{
+					"name": "insert appel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroAppelant\" : \"0340000001\",\r\n    \"numeroCible\" : \"0340000002\",\r\n    \"duree\" : 3,\r\n    \"date\" : \"2021-01-02 00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/appel/simuler",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"appel",
+								"simuler"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:5000"
+		},
+		{
+			"key": "token",
+			"value": "f3c7d9170bf7efc07936e2e588a810a15b8ea0bf"
+		}
+	]
+}
